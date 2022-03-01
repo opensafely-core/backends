@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+              integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q==" 
+              crossorigin="anonymous"
+              referrerpolicy="no-referrer" 
+              />
+        <title>Holding page for <script>document.write(window.location.hostname)</script></title>
+        <style>
+            header {
+                padding: 1rem; 
+                background-color: #002147;
+                color: #fff;
+                font-size: 2rem;
+            }
+            p { 
+                padding: 1rem 0 0 1rem;
+            }
+        </style>
+    </head>
+    <body>
+        <header><script>document.write(window.location.hostname)</script></header>
+        <p>You have reached the SSL holding page for the domain: <script>document.write(window.location.hostname)</script></p>
+        <p>This is part of the infrastructure for the <a href="https://opensafely.org">OpenSAFELY project</a></p>
+        <p>If you have reached this site from within a secure OpenSAFELY backend environment, 
+        it means the DNS your browser is using has not been correctly configured to point to the right place.</p>
+        <p>Please <a href="mailto:tech@opensafely.org">contact the OpenSAFELY team</a>, and we will be happy to help.</p>
+    </body>
+</html>
+
