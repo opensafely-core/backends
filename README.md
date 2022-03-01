@@ -8,7 +8,7 @@ which are not publically routable.
 
 It is deployed as dokku app called `backends`, and it serves a single static
 html page on multiple `*.backends.opensafely.org` domains. We have configured
-LetsEncrypt to reuse the same key, so that we do have to update the key on
+LetsEncrypt to reuse the same key, so that we do not have to update the key on
 every backend every 2-3 months.
 
 
