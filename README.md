@@ -31,14 +31,14 @@ domains:
 Note: we could in theory have a wildcard certificate for
 `*.backends.opensafely.org`, but this requires ACME DNS challenges, which
 in turn require a very privileged Cloudflare API token, and also need a newer
-version of certbot than is currently available on dokku2.
+version of certbot than is currently available on dokku4.
 
 
 ## Adding new domain for a new backend
 
 There is a wildcard DNS for `*.backends.opensafely.org` set up in cloudflare, so no new DNS needed.
 
-To add a new subdomain for a new backend, run these commands on dokku2:
+To add a new subdomain for a new backend, run these commands on dokku4:
 
 1) Add the domain to the dokku application:
 
@@ -72,19 +72,19 @@ as it is renewed
 This is only needed if want to update the index.html page.
 
 If you haven't already, you'll need to add your key to the dokku user's list of
-allowed ssh-keys. On dokku2, run:
+allowed ssh-keys. On dokku4, run:
 
     cat ~/.ssh/authorized_keys | sudo dokku ssh-keys:add admin
 
 Then, back in your local checkout, add dokku as remote and push:
 
-    git remote add dokku dokku@dokku2.ebmdatalab.net:backends
+    git remote add dokku dokku@dokku4.ebmdatalab.net:backends
     git push dokku main
 
 Note: this is not automated, as is a very infrequent task.
 
 
-## Dokku2 certbot configuration
+## Dokku4 certbot configuration
 
 
 The configuration for this certificate should live at:
